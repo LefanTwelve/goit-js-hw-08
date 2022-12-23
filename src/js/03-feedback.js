@@ -45,11 +45,12 @@ form.addEventListener
 
 function localStorageData () {
   const data = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
-  const email = document.querySelector(LOCALSTORAGE_KEY);
-  const message = document.querySelector(LOCALSTORAGE_KEY);
+  const email = document.querySelector('feedback-form-state');
+  const message = document.querySelector('feedback-form-state');
   
   if (data) {
     email.value = data.email;
     message.value = data.message;
   }
 };
+
